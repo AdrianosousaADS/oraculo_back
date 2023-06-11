@@ -22,6 +22,7 @@ class CreateUserService {
         if (userJaExiste) {
             throw new Error("user ja existe")
         }
+        
 
         const user = await prismaClient.user.create(
             {
@@ -37,7 +38,7 @@ class CreateUserService {
                 }
             }
         )
-        return user
+        return user;
     }
 }
 export { CreateUserService }
